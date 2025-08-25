@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Ikoon Group</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+
+
+  <link rel="stylesheet" href="css/style.css"> <!-- Custom Styles -->
+</head>
+<body>
+  <style>
+    
+/* projects */
+/* General container background & padding for each section */
+.featured-projects-preview {
+  background: linear-gradient(135deg, #f5f9ff, #e0efff);
+  border-radius: 20px;
+  margin-bottom: 4rem;
+  padding: 3rem 0;
+}
+
+/* Section Titles */
+.featured-projects-preview h2 {
+  font-weight: 700;
+  font-size: 2.8rem;
+  color: #004085;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.featured-projects-preview h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #004085, #00aaff);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Project cards */
+.project-card {
+  background: #fff;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0, 64, 133, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 420px;  /* fixed height for all cards */
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0, 64, 133, 0.25);
+}
+
+/* Image styling */
+.project-card img {
+  border-radius: 15px 15px 0 0;
+  width: 100%;
+  height: 220px;      /* fixed image height */
+  object-fit: cover;  /* cover ensures image fills box nicely */
+  transition: transform 0.4s ease;
+  display: block;
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Card Body */
+.project-card .card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  height: 180px;  /* fixed height for text area for consistency */
+  overflow: hidden;
+}
+
+.project-card .card-body h5 {
+  color: #003366;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  font-size: 1.2rem;
+  overflow-wrap: break-word;
+}
+
+.project-card .card-body p {
+  color: #555;
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin-bottom: 0;
+  overflow-wrap: break-word;
+}
+
+/* Responsive spacing between rows */
+.row.g-4 > [class*='col-'] {
+  display: flex;
+}
+
+/* Smooth fade-in animation */
+[data-aos] {
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-timing-function: ease;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+}
+
+/* Footer margin */
+#footer-placeholder {
+  margin-top: 6rem;
+}
+
+/* Preloader background */
+#preloader {
+  background-color: #004085;
+}
+
+/* Responsive image height */
+@media (max-width: 768px) {
+  .project-card img {
+    height: 180px;
+  }
+  .project-card {
+    height: 380px; /* slightly smaller card height */
+  }
+  .project-card .card-body {
+    height: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card img {
+    height: 150px;
+  }
+  .project-card {
+    height: 350px;
+  }
+  .project-card .card-body {
+    height: 140px;
+  }
+}
+
+  </style>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader-container">
+      <div class="loader"></div>
+      <img src="images/logos/LOGO.png" alt="Logo" class="loader-logo" />
+    </div>
+  </div>
+  
+
+ <!-- Navbar will be injected here -->
+<div id="navbar"></div>
+
+
+<section id="completed-projects" class="featured-projects-preview py-5">
+    <section class="featured-projects-preview py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Completed Projects</h2>
+        <div class="row g-4">
+    
+            <div class="col-md-4">
+                <div class="project-card shadow-sm p-3 h-100 text-center">
+                  <img src="images/projects/road2.jpg" class="w-100 mb-3" alt="Project 2">
+                  <div class="card-body">
+                    <h5>Ranasthalam to Anantpuram road Project NH-16</h5>
+                    <p>Work Value: 352 Cr. Place: Visakhapatnam</p>
+                  </div>
+                </div>
+              </div>
+    
+          <div class="col-md-4">
+            <div class="project-card shadow-sm p-3 h-100 text-center">
+              <img src="images/projects/road2.jpg" class="w-100 mb-3" alt="Project 2">
+              <div class="card-body">
+                <h5>Ranasthalam to Anantpuram road Project NH-16</h5>
+                <p>Work Value: 352 Cr. Place: Visakhapatnam</p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-md-4">
+            <div class="project-card shadow-sm p-3 h-100 text-center">
+              <img src="images/projects/road3.jpg" class="w-100 mb-3" alt="Project 3">
+              <div class="card-body">
+                <h5>Tumkur To Shivmonga Road Project NH-206</h5>
+                <p>Work Value: 200 Cr. Place: Tiptur & Kadur</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4">
+            <div class="project-card shadow-sm p-3 h-100 text-center">
+              <img src="images/projects/road4.jpg" class="w-100 mb-3" alt="Project 4">
+              <div class="card-body">
+                <h5>Six laning of Khairtunda to Barwa adda section NH2 from km. 360.300 to km. 400.132</h5>
+                <p>Work Value: 250 Cr. Place: Dhanbad</p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-md-4">
+            <div class="project-card shadow-sm p-3 h-100 text-center">
+              <img src="images/projects/road5.jpg" class="w-100 mb-3" alt="Project 5">
+              <div class="card-body">
+                <h5> Govindpur (Rajgunj)- Chas-West Bengal Border From Ch0+000 - Ch37+000, NH-32 </h5>
+                <p>Work Value: 120 Cr. Place: Bokaro
+                 </p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-md-4">
+            <div class="project-card shadow-sm p-3 h-100 text-center">
+              <img src="images/projects/road6.jpg" class="w-100 mb-3" alt="Project 6">
+              <div class="card-body">
+                <h5>Ahmadnagar - Solapur Road NH-561A From Ch- 0+000 to Ch- 38+750 pkg-1</h5>
+                <p>Work Value: 300 Cr. Place: Miraj Gaon
+                 </p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-md-4">
+            <div class="project-card shadow-sm p-3 h-100 text-center">
+              <img src="images/projects/road7.jpg" class="w-100 mb-3" alt="Project 7">
+              <div class="card-body">
+                <h5> Ahmadnagar - Solapur Road NH-561A From Ch- 038+750 to Ch- 80+000 pkg-2</h5>
+                <p>Work Value: 151 Cr. Place: Miraj Gaon
+                 </p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-md-4">
+            <div class="project-card shadow-sm p-3 h-100 text-center">
+              <img src="images/projects/road8.jpg" class="w-100 mb-3" alt="Project 8">
+              <div class="card-body">
+                <h5> Ahmadnagar Byepass Ring road From Ch- 000+000 to Ch- 40+000 pkg-3</h5>
+                <p>Work Value: 110 Cr. Place: Ahmadnagar
+                 </p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-md-4">
+            <div class="project-card shadow-sm p-3 h-100 text-center">
+              <img src="images/projects/road9.jpg" class="w-100 mb-3" alt="Project 9">
+              <div class="card-body">
+                <h5> Dholera Ahmedabad 6 Lane Project</h5>
+                <p>Work Value: 80 Cr. Place: Sindhrej
+                 </p>
+              </div>
+            </div>
+          </div>
+     <div class="col-md-4">
+            <div class="project-card shadow-sm p-3 h-100 text-center">
+              <img src="images/projects/road2.jpg" class="w-100 mb-3" alt="Project 2">
+              <div class="card-body">
+                <h5>Ranasthalam to Anantpuram road Project NH-16</h5>
+                <p>Work Value: 352 Cr. Place: Visakhapatnam</p>
+              </div>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+    </section>
+    </section>
+    <section id="ongoing-projects" class="featured-projects-preview py-5">
+    <section class="featured-projects-preview py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Ongoing Projects</h2>
+        <div class="row g-4">
+    
+          <div class="col-md-4">
+            <div class="project-card shadow-sm p-3 h-100 text-center">
+              <img src="images/projects/road11.jpg" class="w-100 mb-3" alt="Smart Highway Link">
+              <div class="card-body">
+                <h5>NH-8E Verabal kodinar Section Road</h5>
+                <p>Work Value: 110 Cr. Place: Prachi</p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-md-4">
+            <div class="project-card shadow-sm p-3 h-100 text-center">
+              <img src="images/projects/road12.jpg" class="w-100 mb-3" alt="River Bridge">
+              <div class="card-body">
+                <h5>Construction of four lane highway from gazipur- ballia- up/bihar state border
+                  (greenfield) section of nh-31 package I & II.</h5>
+                <p>Work Value: 610 Cr. Place: Gazipur</p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-md-4">
+            <div class="project-card shadow-sm p-3 h-100 text-center">
+              <img src="images/projects/road13.jpg" class="w-100 mb-3" alt="Metro Station Hub">
+              <div class="card-body">
+                <h5>Jaithpur- Rajkot Road Project NH-27 From Ch-117+000- Ch-185+000</h5>
+                <p>Work Value: 632 Cr. Place: Rajkot</p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-md-4">
+            <div class="project-card shadow-sm p-3 h-100 text-center">
+              <img src="images/projects/road14.jpg" class="w-100 mb-3" alt="Metro Station Hub">
+              <div class="card-body">
+                <h5>Construction of double line track (3rd & 4th line) formation including earth work, blanketing, minor bridges, major bridges, Rail Fly over east central railway</h5>
+                <p>Work Value: 335 Cr. Place: Dhanbad(Jharkhand) </p>
+              </div>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+    </section>
+    </section>
+   
+    <section id="upcoming-projects" class="featured-projects-preview py-5">
+    <section class="featured-projects-preview py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Upcoming Projects</h2>
+        <div class="row g-4">
+    
+          <div class="col-md-4">
+            <div class="project-card shadow-sm p-3 h-100 text-center">
+              <img src="images/upcoming1.jpg" class="w-100 mb-3" alt="Upcoming 1">
+              <div class="card-body">
+                <h5>Inland Freight Terminal</h5>
+                <p>Planned logistics hub to ease regional cargo movement.</p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-md-4">
+            <div class="project-card shadow-sm p-3 h-100 text-center">
+              <img src="images/upcoming2.jpg" class="w-100 mb-3" alt="Upcoming 2">
+              <div class="card-body">
+                <h5>Seaside Highway Ring</h5>
+                <p>Next-gen transport loop enhancing coastal connectivity.</p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-md-4">
+            <div class="project-card shadow-sm p-3 h-100 text-center">
+              <img src="images/upcoming3.jpg" class="w-100 mb-3" alt="Upcoming 3">
+              <div class="card-body">
+                <h5>Elevated Corridor</h5>
+                <p>Urban congestion solution spanning major commercial zones.</p>
+              </div>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+    </section>
+    </section>
+   
+    
+
+  <!-- Footer placeholder -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Load Footer -->
+  <script src="js/footer.js"></script>
+  
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/stats.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/script.js"></script>
+  
+  
+  </body>
+  </html>

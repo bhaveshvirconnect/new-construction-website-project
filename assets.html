@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Assets | Ikoon Group</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    body {
+      background: #f9fafb url('https://www.transparenttextures.com/patterns/cubes.png') repeat;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: #212529;
+    }
+
+    .assets-section {
+      background: linear-gradient(135deg, #e0f7ff, #f7fbff);
+      padding: 3rem 1rem 4rem;
+      border-radius: 15px;
+      max-width: 1200px;
+      margin: 3rem auto 4rem;
+      box-shadow: 0 12px 30px rgb(0 123 255 / 0.12);
+      transition: transform 0.3s ease;
+    }
+
+    .assets-section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 40px rgb(0 123 255 / 0.2);
+    }
+
+    .assets-section .container {
+      max-width: 100%;
+      padding: 0 1rem;
+    }
+
+    /* Table Card */
+    .table-responsive {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgb(0 0 0 / 0.1);
+      padding: 1.8rem 1.5rem;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .table-responsive:hover {
+      box-shadow: 0 12px 30px rgb(0 123 255 / 0.25);
+    }
+
+    table.table {
+      border-collapse: separate !important;
+      border-spacing: 0 12px;
+      overflow: hidden;
+      border-radius: 15px;
+      font-size: 1rem;
+    }
+
+    thead.table-primary {
+      background: #004085;
+      color: #fff;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 5px rgba(0, 64, 133, 0.3);
+    }
+
+    thead.table-primary th {
+      border: none;
+      vertical-align: middle;
+      padding: 16px 22px;
+    }
+
+    tbody tr {
+      background: #f8fbff;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+      border: 1px solid transparent;
+    }
+
+    tbody tr:hover {
+      background-color: #d6e9ff;
+      box-shadow: 0 8px 15px rgba(0, 123, 255, 0.15);
+      border-color: #007bff;
+      transform: translateY(-2px);
+    }
+
+    tbody td {
+      padding: 16px 22px;
+      vertical-align: middle;
+      border-top: none !important;
+      font-weight: 600;
+      color: #212529;
+      transition: color 0.3s ease;
+    }
+
+    tfoot tr.fw-bold td {
+      background: #cfe2ff;
+      font-weight: 700;
+      font-size: 1.15rem;
+      padding: 16px 22px;
+      border-top: none !important;
+      color: #004085;
+      letter-spacing: 0.05em;
+    }
+
+    /* Heading styles */
+    .assets-section h1.display-5 {
+      text-shadow: 1px 1px 3px rgba(0,123,255,0.35);
+      letter-spacing: 0.04em;
+    }
+
+    .assets-section p.fs-5 {
+      font-style: italic;
+      color: #5a6268;
+      letter-spacing: 0.03em;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      .assets-section {
+        padding: 2rem 1rem 3rem;
+        margin: 1rem;
+      }
+      table.table {
+        font-size: 0.9rem;
+      }
+      thead.table-primary th,
+      tbody td,
+      tfoot td {
+        padding: 12px 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader-container">
+      <div class="loader"></div>
+      <img src="images/logos/LOGO.png" alt="Logo" class="loader-logo" />
+    </div>
+  </div>
+
+  <!-- Navbar will be injected here -->
+  <div id="navbar"></div>
+
+  <section
+    class="assets-section py-5"
+    data-aos="fade-up"
+    data-aos-duration="1200"
+    data-aos-easing="ease-in-out"
+  >
+    <div class="container text-center mb-5">
+      <h1 class="display-5 fw-bold text-primary">Plant &amp; Machinery</h1>
+      <p class="fs-5 fst-italic">Jharkhand Railway Project</p>
+    </div>
+    <div class="container">
+      <div class="table-responsive">
+        <table
+          class="table table-bordered table-striped table-hover align-middle text-center mb-0"
+          style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
+        >
+          <thead class="table-primary">
+            <tr>
+              <th>S.No.</th>
+              <th>Plant / Machinery</th>
+              <th>Model/Make</th>
+              <th>Quantity</th>
+              <th>Tentative Asset Value (₹)</th>
+              <th>Net Asset Value (₹)</th>
+              <th>Net Asset Value (Lakhs)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Backhoe (JCB)</td>
+              <td>JCB 3DX Plus</td>
+              <td>15</td>
+              <td>32,00,000</td>
+              <td>4,80,00,000</td>
+              <td>480</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Excavator</td>
+              <td>210 T</td>
+              <td>18</td>
+              <td>57,00,000</td>
+              <td>10,26,00,000</td>
+              <td>1026</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Excavatorcum Machine Breaker</td>
+              <td>320 D</td>
+              <td>10</td>
+              <td>22,00,000</td>
+              <td>2,20,00,000</td>
+              <td>220</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>RMC Plant CP 30</td>
+              <td>CP 30</td>
+              <td>7</td>
+              <td>45,00,000</td>
+              <td>3,15,00,000</td>
+              <td>315</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Pneumatic roller</td>
+              <td>Dynamic 14T</td>
+              <td>10</td>
+              <td>23,50,000</td>
+              <td>2,35,00,000</td>
+              <td>235</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Static Roller</td>
+              <td>8 Tonnes</td>
+              <td>15</td>
+              <td>6,50,000</td>
+              <td>97,50,000</td>
+              <td>97.5</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Hot mixplant</td>
+              <td>–</td>
+              <td>4</td>
+              <td>20,50,000</td>
+              <td>82,00,000</td>
+              <td>82</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>Hydra 14 Tonnes</td>
+              <td>14 Tonnes</td>
+              <td>12</td>
+              <td>21,75,000</td>
+              <td>2,61,00,000</td>
+              <td>261</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>Watertanker</td>
+              <td>5000 liters</td>
+              <td>15</td>
+              <td>10,00,000</td>
+              <td>1,50,00,000</td>
+              <td>150</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>10 wheeler loader/Tipper</td>
+              <td>Tata 10 T</td>
+              <td>49</td>
+              <td>27,50,000</td>
+              <td>13,47,50,000</td>
+              <td>1347.5</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>Steel cutting bending machine</td>
+              <td>Automatic</td>
+              <td>40</td>
+              <td>62,000</td>
+              <td>24,80,000</td>
+              <td>24.8</td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td>Mobile RMC plant</td>
+              <td>–</td>
+              <td>15</td>
+              <td>23,00,000</td>
+              <td>3,45,00,000</td>
+              <td>345</td>
+            </tr>
+            <tr>
+              <td>13</td>
+              <td>Mobile Crusher</td>
+              <td>–</td>
+              <td>7</td>
+              <td>10,00,000</td>
+              <td>70,00,000</td>
+              <td>70</td>
+            </tr>
+            <tr>
+              <td>14</td>
+              <td>Automatic Kerb Paver Machine</td>
+              <td>Slipform</td>
+              <td>10</td>
+              <td>29,50,000</td>
+              <td>2,95,00,000</td>
+              <td>295</td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td>Hydraulic rig machine</td>
+              <td>–</td>
+              <td>15</td>
+              <td>78,00,000</td>
+              <td>11,70,00,000</td>
+              <td>1170</td>
+            </tr>
+            <tr>
+              <td>16</td>
+              <td>Road Marking Machine</td>
+              <td>9-12kw Semi Auto</td>
+              <td>10</td>
+              <td>85,000</td>
+              <td>8,50,000</td>
+              <td>8.5</td>
+            </tr>
+            <tr>
+              <td>17</td>
+              <td>Vogele 9m Senser screed paver</td>
+              <td>–</td>
+              <td>3</td>
+              <td>1,53,60,000</td>
+              <td>4,60,80,000</td>
+              <td>460.8</td>
+            </tr>
+            <tr>
+              <td>18</td>
+              <td>LMV</td>
+              <td>Bolero</td>
+              <td>42</td>
+              <td>10,85,000</td>
+              <td>4,55,70,000</td>
+              <td>455.7</td>
+            </tr>
+            <tr>
+              <td>19</td>
+              <td>LMV</td>
+              <td>Scorpio</td>
+              <td>18</td>
+              <td>17,00,000</td>
+              <td>3,06,00,000</td>
+              <td>306</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr class="fw-bold bg-primary text-white fs-5">
+              <td colspan="5" class="text-end">Total Net Asset Value</td>
+              <td>73,49,80,000</td>
+              <td>7349.8</td>
+            </tr>
+            <tr class="fw-bold bg-primary text-white fs-5">
+              <td colspan="6" class="text-end">Net Asset Value in Crores</td>
+              <td>73.498</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer placeholder -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Load Footer -->
+  <script src="js/footer.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/stats.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/script.js"></script>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

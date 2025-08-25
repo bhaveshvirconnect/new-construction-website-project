@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Verticals | Ikoon Group</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    body {
+      font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f0f7ff, #e6f0ff);
+      margin: 0;
+      color: #222;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Section container */
+    .project-zigzag-section {
+      max-width: 1100px;
+      margin: 4rem auto 6rem;
+      padding: 0 1rem;
+      position: relative;
+      background: #ffffffee;
+      border-radius: 25px;
+      box-shadow: 0 12px 40px rgb(0 64 133 / 0.12);
+      overflow: hidden;
+    }
+
+    /* Section Header */
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .section-header h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #004085;
+      letter-spacing: 0.04em;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 8px;
+      margin-bottom: 0;
+    }
+    .section-header h1::after {
+      content: "";
+      position: absolute;
+      width: 60%;
+      height: 4px;
+      background: linear-gradient(90deg, #004085, #00aaff);
+      bottom: 0;
+      left: 20%;
+      border-radius: 2px;
+    }
+    .section-header p {
+      font-size: 1.15rem;
+      color: #555;
+      max-width: 600px;
+      margin: 0.5rem auto 0;
+      font-weight: 500;
+    }
+
+    /* Each project tile */
+    .project-tile {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+      margin-bottom: 6rem;
+      flex-wrap: wrap;
+      padding: 2rem 2rem 3rem;
+      border-radius: 22px;
+      background: #f8fcff;
+      box-shadow: 0 15px 30px rgb(0 64 133 / 0.15);
+      transition: box-shadow 0.35s ease, transform 0.35s ease;
+      overflow: hidden;
+      position: relative;
+      cursor: default;
+    }
+    .project-tile:hover {
+      box-shadow: 0 25px 50px rgb(0 64 133 / 0.35);
+      transform: translateY(-5px);
+    }
+
+    /* Zigzag: even index reverse flex */
+    .project-tile:nth-child(even) {
+      flex-direction: row-reverse;
+      background: #eaf5ff;
+    }
+
+    /* Accent bar on left or right */
+    .project-tile:nth-child(odd) .accent-bar {
+      left: 0;
+      border-top-right-radius: 22px;
+      border-bottom-right-radius: 22px;
+      background: linear-gradient(180deg, #004085 0%, #00aaff 100%);
+    }
+    .project-tile:nth-child(even) .accent-bar {
+      right: 0;
+      border-top-left-radius: 22px;
+      border-bottom-left-radius: 22px;
+      background: linear-gradient(180deg, #00aaff 0%, #004085 100%);
+    }
+    .accent-bar {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 12px;
+      z-index: 2;
+    }
+
+    /* Project photo */
+    .project-photo {
+      flex: 1 1 45%;
+      max-width: 45%;
+      overflow: hidden;
+      border-radius: 22px;
+      box-shadow: 0 12px 30px rgb(0 64 133 / 0.25);
+      transition: transform 0.5s ease, filter 0.5s ease;
+      will-change: transform;
+      position: relative;
+      background: #cce7ff;
+    }
+    .project-photo video {
+      border-radius: 22px;
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      aspect-ratio: 16 / 9;
+      transition: transform 0.6s ease, filter 0.6s ease;
+      filter: brightness(0.95);
+      will-change: transform;
+    }
+    .project-photo:hover video {
+      transform: scale(1.08);
+      filter: brightness(1);
+    }
+
+    /* Project info */
+    .project-info {
+      flex: 1 1 50%;
+      max-width: 50%;
+      position: relative;
+      z-index: 3;
+      padding: 0 0.5rem;
+    }
+    .project-info h3 {
+      font-weight: 700;
+      font-size: 2.3rem;
+      margin-bottom: 1.2rem;
+      color: #003366;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    }
+    .project-info .description {
+      font-weight: 500;
+      font-size: 1.18rem;
+      color: #444;
+      line-height: 1.7;
+      letter-spacing: 0.02em;
+      user-select: text;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .project-zigzag-section {
+        padding: 0 1rem 3rem;
+      }
+      .section-header h1 {
+        font-size: 2.2rem;
+      }
+      .section-header p {
+        font-size: 1rem;
+      }
+      .project-tile,
+      .project-tile:nth-child(even) {
+        flex-direction: column !important;
+        max-width: 100%;
+        margin-bottom: 4rem;
+        padding: 1.5rem 1rem 2.5rem;
+      }
+      .project-photo,
+      .project-info {
+        max-width: 100%;
+        flex-basis: 100%;
+      }
+      .project-photo {
+        margin-bottom: 1.8rem;
+      }
+      .project-info h3 {
+        font-size: 1.8rem;
+      }
+    }
+    .project-zigzag-section {
+  max-width: 1600px;     /* wider max width */
+  margin: 4rem auto 6rem;
+  padding: 0 3rem;       /* more horizontal padding */
+  position: relative;
+  background: #ffffffee;
+  border-radius: 25px;
+  box-shadow: 0 12px 40px rgb(0 64 133 / 0.12);
+  overflow: hidden;
+  transition: padding 0.3s ease;
+}
+
+/* For very large screens, add some side margin */
+@media (min-width: 1800px) {
+  .project-zigzag-section {
+    max-width: 90vw; /* 90% of viewport width */
+    padding: 0 5vw;
+  }
+}
+
+/* Smaller screens keep some padding */
+@media (max-width: 1200px) {
+  .project-zigzag-section {
+    padding: 0 2rem;
+  }
+}
+
+    /* Preloader and other existing styles from your CSS should be included */
+  </style>
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader-container">
+      <div class="loader"></div>
+      <img src="images/logos/LOGO.png" alt="Logo" class="loader-logo" />
+    </div>
+  </div>
+
+  <!-- Navbar will be injected here -->
+  <div id="navbar"></div>
+
+  <section class="project-zigzag-section" aria-label="Construction Verticals">
+    <div class="container">
+
+      <header class="section-header" data-aos="fade-down" data-aos-duration="900">
+        <h1>Our Verticals</h1>
+        <p>Explore the wide range of infrastructure verticals where Ikoon Group delivers excellence, innovation, and sustainability.</p>
+      </header>
+
+      <!-- Highway -->
+      <article id="highway" class="project-tile" data-aos="fade-up" data-aos-delay="100" role="region" aria-labelledby="highway-title">
+        <div class="accent-bar"></div>
+        <div class="project-photo" tabindex="0">
+          <video autoplay muted loop playsinline>
+            <source src="images/verticals/Highway.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="project-info">
+          <h3 id="highway-title">Highway Construction</h3>
+          <p class="description">At the core of our infrastructure portfolio, highway construction represents our commitment to
+            building the nation's roadways with excellence. We specialize in the execution of high-speed
+            expressways, national highways, and arterial roads, ensuring durability, safety, and longevity. With a
+            focus on timely delivery, advanced machinery, and strict quality controls, we create road networks
+            that enhance mobility, reduce travel time, and connect remote regions to mainstream development.</p>
+        </div>
+      </article>
+
+      <!-- Bridge -->
+      <article id="bridge" class="project-tile" data-aos="fade-up" data-aos-delay="200" role="region" aria-labelledby="bridge-title">
+        <div class="accent-bar"></div>
+        <div class="project-photo" tabindex="0">
+          <video autoplay muted loop playsinline>
+            <source src="images/verticals/Bridges.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="project-info">
+          <h3 id="bridge-title">Bridge Construction</h3>
+          <p class="description">Bridges are not just engineering marvels—they are vital links that connect people, cities, and
+            economies. Our bridge construction division is equipped to deliver a wide range of bridge structures
+            including RCC, PSC, steel girder, and cable-stayed bridges. From concept to completion, we handle
+            design coordination, foundation works, superstructure erection, and finishing works with the highest
+            standards of safety and technical precision. Our bridges are built to withstand both natural forces
+            and growing traffic demands.</p>
+        </div>
+      </article>
+
+      <!-- Railway -->
+      <article id="railway" class="project-tile" data-aos="fade-up" data-aos-delay="300" role="region" aria-labelledby="railway-title">
+        <div class="accent-bar"></div>
+        <div class="project-photo" tabindex="0">
+          <video autoplay muted loop playsinline>
+            <source src="images/verticals/Railway.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="project-info">
+          <h3 id="railway-title">Railway Construction</h3>
+          <p class="description">We play a key role in expanding and modernizing India's railway network. Our railway construction
+            capabilities cover new rail lines, gauge conversion, track laying, earthwork, station development,
+            and allied civil structures such as platforms, foot overbridges, and subways. With expertise in both
+            conventional rail and high-speed rail corridors, we ensure compliance with Indian Railways'
+            specifications while meeting the nation's rising demand for faster and safer rail transport.</p>
+        </div>
+      </article>
+
+      <!-- Renewable Energy -->
+      <article id="renewable" class="project-tile" data-aos="fade-up" data-aos-delay="400" role="region" aria-labelledby="renewable-title">
+        <div class="accent-bar"></div>
+        <div class="project-photo" tabindex="0">
+          <video autoplay muted loop playsinline>
+            <source src="images/verticals/Renewable Energy.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="project-info">
+          <h3 id="renewable-title">Renewable Energy Infrastructure</h3>
+          <p class="description">Recognizing the future lies in clean energy, we contribute to India's sustainable development
+            through civil infrastructure for renewable energy projects. Our scope includes site development,
+            foundation works for solar panels and wind turbines, internal roads, stormwater drainage, fencing,
+            control rooms, and equipment installation support. With a focus on green engineering practices and
+            project scalability, we support our clients in transitioning toward a zero-carbon future.</p>
+        </div>
+      </article>
+
+      <!-- Metro -->
+      <article id="metro" class="project-tile" data-aos="fade-up" data-aos-delay="500" role="region" aria-labelledby="metro-title">
+        <div class="accent-bar"></div>
+        <div class="project-photo" tabindex="0">
+          <video autoplay muted loop playsinline>
+            <source src="images/verticals/Metro.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="project-info">
+          <h3 id="metro-title">Metro Construction</h3>
+          <p class="description">Urban congestion demands smart and efficient transport solutions. We are proud to contribute to
+            metro rail infrastructure, including elevated viaducts, underground stations, and supporting civil
+            structures. Our work enables fast-track urban mobility, enhances commuter convenience, and drives
+            economic growth in metropolitan areas. We integrate modern construction methods, traffic
+            management systems, and stringent safety norms to deliver high-quality metro projects on time.</p>
+        </div>
+      </article>
+
+      <!-- Flyover -->
+      <article id="flyover" class="project-tile" data-aos="fade-up" data-aos-delay="600" role="region" aria-labelledby="flyover-title">
+        <div class="accent-bar"></div>
+        <div class="project-photo" tabindex="0">
+          <video autoplay muted loop playsinline>
+            <source src="images/verticals/Flyover.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="project-info">
+          <h3 id="flyover-title">Flyover Construction</h3>
+          <p class="description">Flyovers are critical in decongesting urban road networks and enhancing commuter experience. Our
+            flyover construction vertical encompasses turnkey execution-from foundation and piling to girder
+            launching and deck slab concreting. Whether it's single-span or multi-span, curved or straight, we
+            handle complex traffic conditions and space constraints to deliver structures that are functional,
+            long-lasting, and architecturally refined. Each flyover we build is a step toward a smarter, faster city.</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Footer placeholder -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Load Footer -->
+  <script src="js/footer.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/stats.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/script.js"></script>
+
+  <script>
+    AOS.init({
+      once: true,
+      duration: 900,
+      easing: 'ease-in-out'
+    });
+  </script>
+</body>
+</html>

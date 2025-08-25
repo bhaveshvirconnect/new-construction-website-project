@@ -1,0 +1,77 @@
+<!-- footer.html -->
+<footer class="text-white py-5" style="background-color: #192e38;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 mb-4">
+          <img src="images/logos/LOGO.png" alt="Company Logo" style="max-width: 150px;" class="mb-3">
+          <p>Ikoon Infra Pvt. Ltd.<br>204-208 MADHAV COMPLEX,<br>OPP. THE IMPERIALPALACE HOTEL,<br>DR. YAGNIK ROAD, RAJKOT,<br>Gujarat, India 360001</p>
+          <p>Email: <a href="mailto:info@ikooninfra.com" class="text-white">info@ikoongroup.com</a><br>Phone: +91 6350105587</p>
+        </div>
+        <div class="col-md-3 mb-4">
+          <h5 class="fw-bold">Ongoing Sites</h5>
+          <ul class="list-unstyled">
+            <li>• NH-8E Verabal kodinar Section Road</li>
+            <li>• Four lane highway from Gazipur-Ballia-UP/Bihar</li>
+            <li>• Jaithpur-Rajkot Road Project NH-27</li>
+            <li>• Rail Flyover - Dhanbad (Jharkhand) ECR</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <h5 class="fw-bold">Send Us a Mail</h5>
+          <form id="contactForm">
+            <div class="mb-2"><input type="text" class="form-control" name="name" placeholder="Your Name" required></div>
+            <div class="mb-2"><input type="email" class="form-control" name="email" placeholder="Your Email" required></div>
+            <div class="mb-2"><textarea class="form-control" name="message" rows="3" placeholder="Your Message" required></textarea></div>
+            <button type="submit" class="btn btn-light">Send Message</button>
+          </form>
+          
+          <script>
+          document.getElementById("contactForm").addEventListener("submit", async function(e) {
+            e.preventDefault();
+          
+            let formData = new FormData(this);
+          
+            let response = await fetch("backend/contact.php", {
+              method: "POST",
+              body: formData
+            });
+          
+            let result = await response.json();
+          
+            if (result.success) {
+              let thankYouModal = new bootstrap.Modal(document.getElementById("thankYouModal"));
+              thankYouModal.show();
+              this.reset();
+            } else {
+              alert("Error: " + result.message);
+            }
+          });
+          </script>
+          
+        </div>
+      </div>
+      <hr class="border-light">
+      <div class="text-center small">
+        &copy; 2025 Ikoon Infra Pvt. Ltd. All rights reserved. | Created by 
+        <a href="https://virconnect.in" target="_blank" rel="noopener">virconnect.in</a>
+      </div>
+    </div>
+  </footer>
+  <!-- Thank You Modal -->
+<div class="modal fade" id="thankYouModal" tabindex="-1" aria-labelledby="thankYouModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center p-4">
+      <div class="modal-body">
+        <div class="mb-3">
+          <i class="bi bi-check-circle-fill text-success" style="font-size: 3rem;"></i>
+        </div>
+        <h4 id="thankYouModalLabel" class="mb-2">Thank You!</h4>
+        <p class="text-muted">Your form has been submitted successfully. We will contact you soon.</p>
+      </div>
+      <div class="modal-footer border-0 justify-content-center">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+

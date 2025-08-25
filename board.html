@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Board Of Directors | Ikoon Group</title>
+
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/board.css"/>
+
+  <style>
+    .custom-shape-divider-top-director,
+    .custom-shape-divider-bottom-director {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      z-index: 1;
+    }
+
+    .custom-shape-divider-top-director {
+      margin-bottom: -1px; /* Seamless join */
+    }
+
+    .custom-shape-divider-bottom-director {
+      margin-top: -1px; /* Seamless join */
+    }
+
+    .director-section {
+      background: linear-gradient(135deg, #e0f7ff, #fff5f7);
+      z-index: 2;
+      position: relative;
+      margin-bottom: 80px;
+    }
+
+    .director-img img {
+      max-height: 300px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.2);
+      transition: background 0.3s ease-in-out;
+    }
+    .director-img:hover .overlay {
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .text-gradient {
+      background: linear-gradient(45deg, #007bff, #00bcd4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+    }
+    .text-blue {
+      color: #004085;
+    }
+
+    /* Fix for text padding so it doesn't stick to edges */
+    .director-text {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+
+    .position {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0056b3; /* A nice blue shade */
+  margin-top: -10px;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader-container">
+      <div class="loader"></div>
+      <img src="images/logos/LOGO.png" alt="Logo" class="loader-logo"/>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <div id="navbar"></div>
+
+  <section class="position-relative">
+    <!-- Page Heading -->
+    <div class="page-heading py-5 text-center bg-light" data-aos="fade-down">
+      <h1 class="fw-bold display-4 text-gradient">Board of Directors</h1>
+      <p class="lead text-muted">Leading with Vision, Integrity & Excellence</p>
+    </div>
+  
+    <!-- Top Shape Divider -->
+    <div class="custom-shape-divider-top-director">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0V40c300,80,900,-40,1200,20V0Z" fill="#87ceeb"></path>
+      </svg>
+    </div>
+    
+    <div class="container">
+
+      <!-- Director 1 (Image Right) -->
+      <section class="director-section py-5" data-aos="fade-up">
+        <div class="row align-items-center g-5 flex-md-row flex-column-reverse">
+          <!-- Text -->
+          <div class="col-md-6 director-text" data-aos="fade-right" data-aos-delay="100">
+            <h6 class="fw-bold text-gradient mb-3">Meet Our Director</h6>
+            <h2 class="fw-bold text-primary mb-2">Mr. Chirag Vajir</h2>
+            <p class="position">Chairman & Managing Director</p>
+
+            <p class="lead text-blue">
+              Mr. Chirag Vajir is a distinguished business leader and the driving force behind the company’s strategic growth and governance.
+            </p>
+            <p class="text-blue">
+              With a strong foundation in corporate management and leadership, he holds the dual role of Chairman and Managing Director. Under his stewardship, the company has seen remarkable expansion in both scale and scope. His mission-driven leadership style, combined with his unwavering commitment to excellence and ethical practices, continues to propel the organization to new heights in the infrastructure sector.
+            </p>
+          </div>
+          <!-- Image -->
+          <div class="col-md-6" data-aos="fade-left" data-aos-delay="200">
+            <div class="position-relative overflow-hidden rounded shadow-lg director-img">
+              <img src="images/directors/chirag.png" alt="John Doe" class="img-fluid"/>
+              <div class="overlay position-absolute top-0 start-0 w-100 h-100"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Director 2 (Image Left) -->
+      <section class="director-section py-5" data-aos="fade-up">
+        <div class="row align-items-center g-5">
+          <!-- Image -->
+          <div class="col-md-6" data-aos="fade-left" data-aos-delay="100">
+            <div class="position-relative overflow-hidden rounded shadow-lg director-img">
+              <img src="images/directors/jeetu.png" alt="Jitendra Shingala " class="img-fluid"/>
+              <div class="overlay position-absolute top-0 start-0 w-100 h-100"></div>
+            </div>
+          </div>
+          <!-- Text -->
+          <div class="col-md-6 director-text" data-aos="fade-right" data-aos-delay="200">
+            <h6 class="fw-bold text-gradient mb-3">Meet Our Director</h6>
+            <h2 class="fw-bold text-primary mb-4">Mr. Jitendra Shingala </h2>
+            <p class="position">Promoter & Director</p>
+            <p class="lead text-blue">
+              Mr. Jitendra Shingala is a visionary entrepreneur and dynamic leader whose foresight and dedication laid the foundation of the company
+            </p>
+            <p class="text-blue">
+              With a deep understanding of infrastructural and business dynamics, he has played a pivotal role in shaping the organization’s long-term strategy. As a Promoter & Director, his commitment towards sustainable development and innovation continues to inspire the team. He is known for his grounded leadership and strategic insight that helps drive consistent growth and operational excellence.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Director 3 (Image Right) -->
+      <section class="director-section py-5" data-aos="fade-up">
+        <div class="row align-items-center g-5 flex-md-row flex-column-reverse">
+          <!-- Text -->
+          <div class="col-md-6 director-text" data-aos="fade-right" data-aos-delay="100">
+            <h6 class="fw-bold text-gradient mb-3">Meet Our Director</h6>
+            <h2 class="fw-bold text-primary mb-4">Ms. Bhoomi Vajir </h2>
+            <p class="position">Director</p>
+            <p class="lead text-blue">
+              Ms. Bhoomi Vajir is an emerging leader and a progressive thinker with a sharp focus on innovation, inclusivity, and strategic development. 
+            </p>
+            <p class="text-blue">
+              As Director, she contributes to the company’s governance and operational direction with a modern approach to leadership. Her role emphasizes organizational culture, brand integrity, and the fostering of internal talent. She is committed to driving excellence through collaboration, innovation, and a people-first perspective.
+            </p>
+          </div>
+          <!-- Image -->
+          <div class="col-md-6" data-aos="fade-left" data-aos-delay="200">
+            <div class="position-relative overflow-hidden rounded shadow-lg director-img">
+              <img src="images/directors/bhoomi.png" alt="Bhoomi vajir" class="img-fluid"/>
+              <div class="overlay position-absolute top-0 start-0 w-100 h-100"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Director 4 (Image Left) -->
+      <section class="director-section py-5" data-aos="fade-up">
+        <div class="row align-items-center g-5">
+          <!-- Image -->
+          <div class="col-md-6" data-aos="fade-left" data-aos-delay="100">
+            <div class="position-relative overflow-hidden rounded shadow-lg director-img">
+              <img src="images/directors/mohit.png" alt="Mohit Dhruv" class="img-fluid"/>
+              <div class="overlay position-absolute top-0 start-0 w-100 h-100"></div>
+            </div>
+          </div>
+          <!-- Text -->
+          <div class="col-md-6 director-text" data-aos="fade-right" data-aos-delay="200">
+            <h6 class="fw-bold text-gradient mb-3">Meet Our Director</h6>
+            <h2 class="fw-bold text-primary mb-4">Mr. Mohit Dhruv</h2>
+            <p class="position">Director, Asset Management</p>
+            <p class="lead text-blue">
+              Mr. Mohit Dhruv is a result-oriented professional known for his exceptional ability in managing complex infrastructural portfolios. 
+            </p>
+            <p class="text-blue">
+              In his role as Director of Asset Management, he contributes significantly by optimizing the lifecycle value of our assets through strategic planning, efficiency improvement, and risk mitigation. His detailed knowledge of infrastructure systems and firm grip over asset performance metrics allow the company to maintain operational excellence and sustainability across projects.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Director 5 (Image Right) -->
+      <section class="director-section py-5" data-aos="fade-up">
+        <div class="row align-items-center g-5 flex-md-row flex-column-reverse">
+          <!-- Text -->
+          <div class="col-md-6 director-text" data-aos="fade-right" data-aos-delay="100">
+            <h6 class="fw-bold text-gradient mb-3">Meet Our Director</h6>
+            <h2 class="fw-bold text-primary mb-4">Mr. Pratik Dhruv</h2>
+            <p class="position">Director, Finance</p>
+            <p class="lead text-blue">
+              Mr. Pratik Dhruv is a finance specialist with a sharp acumen for fiscal strategy, regulatory compliance, and investment management.
+            </p>
+            <p class="text-blue">
+              As Director of Finance, he is instrumental in shaping the financial vision of the company by driving effective financial planning, risk control, and capital structuring. His insights into corporate finance, cost control mechanisms, and funding frameworks help maintain robust financial health while supporting strategic expansion initiatives.
+            </p>
+          </div>
+          <!-- Image -->
+          <div class="col-md-6" data-aos="fade-left" data-aos-delay="200">
+            <div class="position-relative overflow-hidden rounded shadow-lg director-img">
+              <img src="images/directors/prateek.png" alt="pratik dhruv" class="img-fluid"/>
+              <div class="overlay position-absolute top-0 start-0 w-100 h-100"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Director 6 (Image Left) -->
+      <section class="director-section py-5" data-aos="fade-up">
+        <div class="row align-items-center g-5">
+          <!-- Image -->
+          <div class="col-md-6" data-aos="fade-left" data-aos-delay="100">
+            <div class="position-relative overflow-hidden rounded shadow-lg director-img">
+              <img src="images/directors/raj.png" alt="Emily Davis" class="img-fluid"/>
+              <div class="overlay position-absolute top-0 start-0 w-100 h-100"></div>
+            </div>
+          </div>
+          <!-- Text -->
+          <div class="col-md-6 director-text" data-aos="fade-right" data-aos-delay="200">
+            <h6 class="fw-bold text-gradient mb-3">Meet Our Director</h6>
+            <h2 class="fw-bold text-primary mb-4">Mr. Raj Shingala</h2>
+            <p class="position">Executive Director</p>
+            <p class="lead text-blue">
+              Mr. Raj Shingala is the new-generation entrepreneur of Ikoon Infra Private Limited, representing the company’s forward-looking vision and dynamic leadership. 
+            </p>
+            <p class="text-blue">
+              As Executive Director, he plays a crucial role in leading the company's upcoming plans from the executional front, ensuring seamless implementation and operational excellence. With a strong command over project management and asset oversight, he brings energy, innovation, and precision to the company’s core functions. His proactive leadership and execution-driven mindset position him as a key force in translating strategic goals into on-ground success, marking Ikoon Infra as a rising player in the infrastructure industry.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Director 7 (Image Right) -->
+      <section class="director-section py-5" data-aos="fade-up">
+        <div class="row align-items-center g-5 flex-md-row flex-column-reverse">
+          <!-- Text -->
+          <div class="col-md-6 director-text" data-aos="fade-right" data-aos-delay="100">
+            <h6 class="fw-bold text-gradient mb-3">Meet Our Director</h6>
+            <h2 class="fw-bold text-primary mb-4">Mr. Pradeep Mathur</h2>
+            <p class="position">CEO & Director</p>
+            <p class="lead text-blue">
+              Er. Pradeep Mathur is a highly experienced and seasoned techno-commercial professional; holding a vast experience in handling million-dollar projects in varied infrastructural industry verticals.
+            </p>
+            <p class="text-blue">
+              A civil engineer with double masters in business administration and international management having 26 years of working experience till date. He specializes in highways, and has also been associated with other infrastructural projects comprising of railways, power, difficult terrain engineering, marine etc. He has been serving on senior most elite positions and as an Independent Director with many blue-chip companies. Here, with us; he is extending his expertise by holding CEO & Director position; to expand our horizons in the field of infrastructural development and make a mark in nations’ pride.
+            </p>
+          </div>
+          <!-- Image -->
+          <div class="col-md-6" data-aos="fade-left" data-aos-delay="200">
+            <div class="position-relative overflow-hidden rounded shadow-lg director-img">
+              <img src="images/directors/pradeep.jpg" alt="pradeep mathur" class="img-fluid"/>
+              <div class="overlay position-absolute top-0 start-0 w-100 h-100"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Bottom Shape Divider -->
+<div class="custom-shape-divider-bottom-director">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" style="display:block; width:100%; height:100px;">
+    <path d="M0,0 C300,100 900,0 1200,80 L1200,120 L0,120 Z" fill="#87ceeb"></path>
+  </svg>
+</div>
+
+
+  </section>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+  <script src="js/footer.js"></script>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/stats.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
